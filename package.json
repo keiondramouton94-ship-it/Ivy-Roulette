@@ -1,0 +1,9 @@
+{
+  "name": "ivy-roulette",
+  "version": "1.0.0",
+  "description": "21+ online party game",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  }
+}
