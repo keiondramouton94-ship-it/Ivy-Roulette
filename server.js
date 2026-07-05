@@ -55,7 +55,7 @@ button:hover{
 
 <input
   id="players"
-  placeholder="Keiondra, Ivy, Topanga, Rollz"
+  placeholder="Enter Your Name"
   style="
     padding:15px;
     width:500px;
