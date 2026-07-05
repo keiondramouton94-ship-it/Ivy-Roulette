@@ -96,7 +96,21 @@ function startGame() {
     <h1 style="color:hotpink;">
       IT IS ${name.toUpperCase()}'S TURN!
     </h1>
+  <button style="
+      background:hotpink;
+      color:white;
+      border:none;
+      padding:20px 40px;
+      border-radius:20px;
+      font-size:30px;
+      cursor:pointer;
+    ">
+      🎡 SPIN THE WHEEL
+    </button>
 
+  `;
+
+}
     <button style="
       background:hotpink;
       color:white;
