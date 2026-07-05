@@ -1,6 +1,6 @@
-/* ===================================
+/* =========================================
    IVY ROULETTE
-=================================== */
+========================================= */
 
 *{
     margin:0;
@@ -8,9 +8,9 @@
     box-sizing:border-box;
 }
 
-/* ===================================
+/* =========================================
    BODY
-=================================== */
+========================================= */
 
 body{
 
@@ -26,9 +26,9 @@ body{
 
     background-color:#000;
 
-    color:white;
-
     font-family:Arial, Helvetica, sans-serif;
+
+    color:white;
 
     text-align:center;
 
@@ -38,7 +38,7 @@ body{
 
 }
 
-/* Dark overlay so text stays readable */
+/* Dark overlay */
 
 body::before{
 
@@ -48,15 +48,15 @@ body::before{
 
     inset:0;
 
-    background:rgba(0,0,0,.45);
+    background:rgba(0,0,0,.30);
 
     z-index:-1;
 
 }
 
-/* ===================================
+/* =========================================
    LOGO
-=================================== */
+========================================= */
 
 .logo-container{
 
@@ -64,21 +64,27 @@ body::before{
 
     justify-content:center;
 
-    margin-top:20px;
+    align-items:center;
+
+    margin-top:5px;
+
+    margin-bottom:-40px;
 
 }
 
 .logo{
 
-    width:300px;
+    width:520px;
 
-    max-width:90%;
+    max-width:95%;
+
+    display:block;
 
 }
 
-/* ===================================
-   SCREENS
-=================================== */
+/* =========================================
+   HOME & GAME
+========================================= */
 
 .home-screen,
 .game-screen{
@@ -91,7 +97,7 @@ body::before{
 
     justify-content:flex-start;
 
-    padding:20px;
+    padding:15px;
 
 }
 
@@ -101,9 +107,9 @@ body::before{
 
 }
 
-/* ===================================
+/* =========================================
    HEADINGS
-=================================== */
+========================================= */
 
 h1{
 
@@ -115,31 +121,37 @@ h1{
 
         0 0 10px hotpink,
 
-        0 0 25px hotpink;
+        0 0 25px hotpink,
 
-    margin-bottom:20px;
+        0 0 45px hotpink;
+
+    margin-bottom:15px;
 
 }
 
-h2{
+.tagline{
 
     color:#8DB600;
 
+    font-size:34px;
+
     text-shadow:
 
-        0 0 12px #8DB600;
+        0 0 20px #8DB600;
 
-    margin-bottom:25px;
+    margin-top:0;
+
+    margin-bottom:18px;
 
 }
 
-/* ===================================
-   PLAYER INPUT
-=================================== */
+/* =========================================
+   INPUT
+========================================= */
 
 input{
 
-    width:500px;
+    width:550px;
 
     max-width:90%;
 
@@ -149,19 +161,25 @@ input{
 
     border-radius:18px;
 
-    font-size:22px;
+    font-size:24px;
 
     text-align:center;
 
     outline:none;
 
-    margin-top:20px;
+    margin-top:5px;
+
+    margin-bottom:10px;
+
+    background:white;
+
+    color:#333;
 
 }
 
-/* ===================================
+/* =========================================
    BUTTONS
-=================================== */
+========================================= */
 
 button{
 
@@ -173,19 +191,19 @@ button{
 
     border-radius:18px;
 
-    padding:18px 45px;
+    padding:18px 50px;
 
     font-size:24px;
 
     cursor:pointer;
 
-    margin:20px;
+    margin:18px;
 
     transition:.25s;
 
     box-shadow:
 
-        0 0 18px hotpink;
+        0 0 20px hotpink;
 
 }
 
@@ -199,27 +217,9 @@ button:hover{
 
 }
 
-/* ===================================
-   POINTER
-=================================== */
-
-.pointer{
-
-    font-size:65px;
-
-    color:#FFD700;
-
-    margin-bottom:-25px;
-
-    text-shadow:
-
-        0 0 20px gold;
-
-}
-
-/* ===================================
+/* =========================================
    WHEEL
-=================================== */
+========================================= */
 
 .wheel-container{
 
@@ -237,13 +237,11 @@ button:hover{
 
 #wheel{
 
-    width:430px;
+    width:470px;
 
     max-width:95%;
 
     display:block;
-
-    margin:auto;
 
     transition:
 
@@ -253,45 +251,45 @@ button:hover{
 
 }
 
-/* ===================================
+/* =========================================
    CATEGORY
-=================================== */
+========================================= */
 
 #categoryTitle{
 
-    font-size:48px;
-
     color:#8DB600;
+
+    font-size:48px;
 
     text-shadow:
 
-        0 0 18px #8DB600;
+        0 0 20px #8DB600;
 
-    margin-top:10px;
+    margin-top:15px;
 
-    margin-bottom:15px;
+    margin-bottom:20px;
 
 }
 
-/* ===================================
-   CARD AREA
-=================================== */
+/* =========================================
+   CARD
+========================================= */
 
 #cardBox{
 
-    width:700px;
+    width:650px;
 
-    max-width:92%;
+    height:930px;
 
-    min-height:350px;
+    max-width:90%;
 
-    background:rgba(15,15,15,.92);
+    background-image:url("card-front.png");
 
-    border:4px solid hotpink;
+    background-size:contain;
 
-    border-radius:25px;
+    background-repeat:no-repeat;
 
-    padding:35px;
+    background-position:center;
 
     display:flex;
 
@@ -299,51 +297,55 @@ button:hover{
 
     align-items:center;
 
+    padding:180px 80px 120px;
+
     text-align:center;
 
-    font-size:30px;
+    font-size:32px;
 
-    line-height:1.6;
+    font-weight:bold;
 
-    box-shadow:
+    line-height:1.5;
 
-        0 0 30px hotpink,
+    color:white;
 
-        0 0 15px #8DB600;
+    text-shadow:
 
-    margin-top:20px;
+        0 0 10px black;
 
-    margin-bottom:25px;
+    transition:.8s;
+
+    margin-top:15px;
 
 }
 
-/* ===================================
+/* =========================================
    MOBILE
-=================================== */
+========================================= */
 
 @media(max-width:768px){
 
 .logo{
 
-    width:220px;
+    width:300px;
+
+}
+
+.tagline{
+
+    font-size:22px;
 
 }
 
 h1{
 
-    font-size:36px;
-
-}
-
-#categoryTitle{
-
-    font-size:32px;
+    font-size:38px;
 
 }
 
 #wheel{
 
-    width:310px;
+    width:320px;
 
 }
 
@@ -365,11 +367,11 @@ input{
 
     width:95%;
 
+    height:650px;
+
+    padding:120px 40px 70px;
+
     font-size:22px;
-
-    min-height:260px;
-
-    padding:25px;
 
 }
 
