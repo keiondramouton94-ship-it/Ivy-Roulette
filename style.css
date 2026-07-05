@@ -1,3 +1,7 @@
+/* ===========================
+   IVY ROULETTE
+=========================== */
+
 *{
     margin:0;
     padding:0;
@@ -6,18 +10,48 @@
 
 body{
 
-    background:#000;
+    background:#050505;
+
     color:white;
+
     font-family:Arial, Helvetica, sans-serif;
+
     text-align:center;
+
     overflow-x:hidden;
 
 }
 
+/* ===========================
+   LOGO
+=========================== */
+
+.logo-container{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    margin-top:20px;
+
+}
+
+.logo{
+
+    width:320px;
+
+    max-width:90%;
+
+}
+
+/* ===========================
+   SCREENS
+=========================== */
+
 .home-screen,
 .game-screen{
-
-    min-height:100vh;
 
     display:flex;
 
@@ -37,25 +71,19 @@ body{
 
 }
 
-.logo{
-
-    width:450px;
-
-    max-width:90%;
-
-    margin-bottom:-40px;
-
-}
+/* ===========================
+   TEXT
+=========================== */
 
 h1{
 
     color:#ff4fa3;
 
-    font-size:60px;
+    font-size:55px;
 
     margin-bottom:20px;
 
-    text-shadow:0 0 15px hotpink;
+    text-shadow:0 0 20px hotpink;
 
 }
 
@@ -63,31 +91,41 @@ h2{
 
     color:#8DB600;
 
+    margin-top:15px;
+
     margin-bottom:30px;
 
-    text-shadow:0 0 10px #8DB600;
+    text-shadow:0 0 15px #8DB600;
 
 }
 
+/* ===========================
+   INPUT
+=========================== */
+
 input{
 
-    width:550px;
+    width:500px;
 
     max-width:90%;
 
     padding:18px;
 
-    font-size:22px;
-
     border:none;
 
     border-radius:15px;
 
-    outline:none;
+    font-size:22px;
 
     text-align:center;
 
+    outline:none;
+
 }
+
+/* ===========================
+   BUTTONS
+=========================== */
 
 button{
 
@@ -97,9 +135,11 @@ button{
 
     border:none;
 
+    border-radius:15px;
+
     padding:18px 40px;
 
-    border-radius:15px;
+    margin:20px;
 
     font-size:24px;
 
@@ -117,42 +157,134 @@ button:hover{
 
 }
 
+/* ===========================
+   WHEEL
+=========================== */
+
+.wheel-container{
+
+    margin-top:20px;
+
+}
+
 #wheel{
 
     font-size:120px;
 
-    margin:30px;
-
-    transition:1s;
+    transition:transform 3s ease;
 
 }
 
+/* ===========================
+   CATEGORY
+=========================== */
+
+#categoryTitle{
+
+    color:#8DB600;
+
+    font-size:42px;
+
+    margin-top:20px;
+
+    margin-bottom:20px;
+
+}
+
+/* ===========================
+   CARD
+=========================== */
+
 #cardBox{
 
-    background:#111;
-
-    border:4px solid hotpink;
-
-    border-radius:20px;
-
-    padding:30px;
-
-    width:700px;
+    width:650px;
 
     max-width:90%;
 
-    margin:30px;
+    min-height:300px;
+
+    background:linear-gradient(180deg,#1b1b1b,#090909);
+
+    border:4px solid hotpink;
+
+    border-radius:25px;
+
+    padding:35px;
+
+    margin-top:25px;
+
+    margin-bottom:25px;
+
+    box-shadow:
+
+        0 0 25px hotpink,
+
+        0 0 10px #8DB600;
 
     font-size:28px;
 
     line-height:1.6;
 
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
 }
 
-#categoryTitle{
+/* ===========================
+   MOBILE
+=========================== */
 
-    font-size:48px;
+@media(max-width:768px){
 
-    margin-top:30px;
+.logo{
+
+    width:220px;
+
+}
+
+h1{
+
+    font-size:34px;
+
+}
+
+h2{
+
+    font-size:22px;
+
+}
+
+input{
+
+    width:90%;
+
+}
+
+button{
+
+    width:90%;
+
+    font-size:22px;
+
+}
+
+#wheel{
+
+    font-size:90px;
+
+}
+
+#cardBox{
+
+    width:92%;
+
+    font-size:22px;
+
+    padding:25px;
+
+}
 
 }
