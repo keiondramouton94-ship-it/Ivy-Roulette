@@ -125,9 +125,9 @@ function startGame() {
   `;
 }
 </script>
+
 </body>
 </html>
-`;
 
 http.createServer((req,res)=>{
 
