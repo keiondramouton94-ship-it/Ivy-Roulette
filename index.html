@@ -5,10 +5,9 @@
 
     <meta charset="UTF-8">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Ivy Roulette</title>
+    <title>Ivy Roulette Reloaded</title>
 
     <link rel="stylesheet" href="style.css">
 
@@ -16,112 +15,125 @@
 
 <body>
 
-    <!-- LOGO ALWAYS VISIBLE -->
+<!-- ===========================
+     HOME SCREEN
+=========================== -->
 
-    <div class="logo-container">
-
-        <img
-            src="ivy-logo.png"
-            class="logo"
-            alt="Ivy Roulette">
-
-    </div>
-
-    <!-- HOME SCREEN -->
-
-    <div
-        class="home-screen"
-        id="homeScreen">
-
-        <h2>
-
-            21+ • DRINK • DARE • GET WILD
-
-        </h2>
-
-        <input
-
-            id="playersInput"
-
-            type="text"
-
-            placeholder="Enter your name"
-
-        >
-
-        <button id="startBtn">
-
-            START GAME
-
-        </button>
-
-    </div>
-
-
-    <!-- GAME SCREEN -->
-
-    <div
-
-        class="game-screen hidden"
-
-        id="gameScreen">
-
-        <h1 id="turnTitle">
-
-            IT'S YOUR TURN
-
-        </h1>
-
-        <div class="wheel-container">
+<div id="homeScreen" class="home-screen">
 
     <img
-        src="wheel.png"
-        id="wheel"
-        alt="Ivy Roulette Wheel">
+        src="ivy-logo.png"
+        class="logo"
+        alt="Ivy Roulette Logo"
+    >
+
+    <h2 class="tagline">
+
+        21+ • DRINK • DARE • GET WILD
+
+    </h2>
+
+    <input
+
+        id="playersInput"
+
+        type="text"
+
+        placeholder="Enter player names separated by commas"
+
+    >
+
+    <button id="startBtn">
+
+        START GAME
+
+    </button>
 
 </div>
 
-        <button id="spinBtn">
+<!-- ===========================
+     GAME SCREEN
+=========================== -->
 
-            SPIN THE WHEEL
+<div id="gameScreen" class="game-screen hidden">
 
-        </button>
+    <!-- Keep logo visible the whole game -->
 
-        <h2 id="categoryTitle"></h2>
+    <img
 
-        <button
+        src="ivy-logo.png"
 
-            id="drawBtn"
+        class="logo game-logo"
 
-            class="hidden">
+        alt="Ivy Roulette Logo"
 
-            DRAW CARD
+    >
 
-        </button>
+    <h1 id="turnTitle">
 
-        <div
+        PLAYER'S TURN
 
-            id="cardBox"
+    </h1>
 
-            class="hidden">
+    <!-- Wheel -->
 
-        </div>
+    <div class="wheel-container">
 
-        <button
+        <img
 
-            id="nextBtn"
+            src="wheel.png"
 
-            class="hidden">
+            id="wheel"
 
-            SPIN AGAIN
+            alt="Ivy Roulette Wheel"
 
-        </button>
+        >
 
     </div>
 
-    <script src="cards.js"></script>
+    <button id="spinBtn">
 
-    <script src="game.js"></script>
+        SPIN THE WHEEL
+
+    </button>
+
+    <h2 id="categoryTitle"></h2>
+
+    <button
+
+        id="drawBtn"
+
+        class="hidden">
+
+        DRAW CARD
+
+    </button>
+
+    <!-- THIS WILL BECOME THE FLIPPING CARD -->
+
+    <div
+
+        id="cardBox"
+
+        class="hidden">
+
+    </div>
+
+    <button
+
+        id="nextBtn"
+
+        class="hidden">
+
+        NEXT PLAYER
+
+    </button>
+
+</div>
+
+<script src="cards.js"></script>
+
+<script src="game.js"></script>
 
 </body>
 
