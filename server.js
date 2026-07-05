@@ -53,11 +53,23 @@ button:hover{
 
 <br>
 
-<button>CREATE ROOM</button>
+<input
+  id="players"
+  placeholder="Keiondra, Ivy, Topanga, Rollz"
+  style="
+    padding:15px;
+    width:500px;
+    border-radius:12px;
+    font-size:20px;
+    border:none;
+  "
+>
 
-<button>JOIN ROOM</button>
+<br><br>
 
-<p>Example Room Code: IVY-1012</p>
+<button>
+  START GAME
+</button>
 
 </body>
 </html>
