@@ -81,9 +81,11 @@ button:hover{
 
 <br><br>
 
-<button>
+<button onclick="startGame()">
   START GAME
 </button>
+
+<div id="game"></div>
 
 </body>
 </html>
@@ -103,5 +105,21 @@ http.createServer((req,res)=>{
   res.end(html);
 
 }).listen(PORT,()=>{
+  function startGame(){
+
+  const name =
+    document.getElementById("players").value;
+
+  document.getElementById("game").innerHTML = `
+    <h1>
+      IT IS ${name.toUpperCase()}'S TURN!
+    </h1>
+
+    <button>
+      SPIN THE WHEEL
+    </button>
+  `;
+
+}
   console.log("Ivy Roulette running on port " + PORT);
 });
