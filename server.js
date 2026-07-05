@@ -86,7 +86,31 @@ button:hover{
 </button>
 
 <div id="game"></div>
+<script>
+function startGame() {
 
+  const name =
+    document.getElementById("players").value;
+
+  document.getElementById("game").innerHTML = `
+    <h1 style="color:hotpink;">
+      IT IS ${name.toUpperCase()}'S TURN!
+    </h1>
+
+    <button style="
+      background:hotpink;
+      color:white;
+      border:none;
+      padding:20px 40px;
+      border-radius:20px;
+      font-size:30px;
+      cursor:pointer;
+    ">
+      🎡 SPIN THE WHEEL
+    </button>
+  `;
+}
+</script>
 </body>
 </html>
 `;
@@ -105,21 +129,6 @@ http.createServer((req,res)=>{
   res.end(html);
 
 }).listen(PORT,()=>{
-  function startGame(){
-
-  const name =
-    document.getElementById("players").value;
-
-  document.getElementById("game").innerHTML = `
-    <h1>
-      IT IS ${name.toUpperCase()}'S TURN!
-    </h1>
-
-    <button>
-      SPIN THE WHEEL
-    </button>
-  `;
-
-}
+  
   console.log("Ivy Roulette running on port " + PORT);
 });
