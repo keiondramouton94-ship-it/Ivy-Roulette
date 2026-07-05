@@ -1,7 +1,7 @@
 const dareCards = [
   
 "Tell everyone your go to search on pornsites",
-"Comment "I WANT YOU" under your crush's last birdy post and leave it up for the duration of the game",
+"Comment I WANT YOU under your crush's last birdy post and leave it up for the duration of the game",
 "Tell us what turns you on",
 "Read your last 3 text messages out loud",
 "Name the strangest place you ever had sex",
@@ -47,7 +47,7 @@ const shotCards = [
 
 const wildCards = [
 
-"Give a lap dance to a player of your choice,
+"Give a lap dance to a player of your choice",
 "Get up and race the person to your right loser takes 4 shots",
 "Twerk off!2 players must compete. All other players must vote",
 "Call any businesses and put them on the phone with eachother",
