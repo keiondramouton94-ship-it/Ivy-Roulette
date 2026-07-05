@@ -1,4 +1,5 @@
 const http = require("http");
+const fs = require("fs");
 
 const PORT = process.env.PORT || 3000;
 
@@ -83,8 +84,18 @@ button:hover{
 `;
 
 http.createServer((req,res)=>{
+
+  if(req.url === "/ivy-logo.png"){
+    fs.readFile("ivy-logo.png", (err, data) => {
+      res.writeHead(200, {"Content-Type":"image/png"});
+      res.end(data);
+    });
+    return;
+  }
+
   res.writeHead(200,{"Content-Type":"text/html"});
   res.end(html);
+
 }).listen(PORT,()=>{
   console.log("Ivy Roulette running on port " + PORT);
 });
