@@ -1,88 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
     <title>Ivy Roulette</title>
 
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
-<div class="home-screen" id="homeScreen">
+    <!-- LOGO ALWAYS VISIBLE -->
 
-    <img
-        src="ivy-logo.png"
-        class="logo"
-        alt="Ivy Roulette Logo"
-    >
+    <div class="logo-container">
 
-    <h2>21+ • DRINK • DARE • GET WILD</h2>
+        <img
+            src="ivy-logo.png"
+            class="logo"
+            alt="Ivy Roulette">
 
-    <input
-        id="playersInput"
-        type="text"
-        placeholder="Enter player names separated by commas"
-    >
+    </div>
 
-    <button id="startBtn">
-        START GAME
-    </button>
+    <!-- HOME SCREEN -->
 
-</div>
+    <div
+        class="home-screen"
+        id="homeScreen">
+
+        <h2>
+
+            21+ • DRINK • DARE • GET WILD
+
+        </h2>
+
+        <input
+
+            id="playersInput"
+
+            type="text"
+
+            placeholder="Enter your name"
+
+        >
+
+        <button id="startBtn">
+
+            START GAME
+
+        </button>
+
+    </div>
 
 
-<div class="game-screen hidden" id="gameScreen">
+    <!-- GAME SCREEN -->
 
-    <h1 id="turnTitle">
-        IT'S YOUR TURN
-    </h1>
+    <div
 
-    <div class="wheel-container">
+        class="game-screen hidden"
 
-        <div id="wheel">
+        id="gameScreen">
 
-            🎡
+        <h1 id="turnTitle">
+
+            IT'S YOUR TURN
+
+        </h1>
+
+        <div class="wheel-container">
+
+            <div id="wheel">
+
+                🎡
+
+            </div>
 
         </div>
 
+        <button id="spinBtn">
+
+            SPIN THE WHEEL
+
+        </button>
+
+        <h2 id="categoryTitle"></h2>
+
+        <button
+
+            id="drawBtn"
+
+            class="hidden">
+
+            DRAW CARD
+
+        </button>
+
+        <div
+
+            id="cardBox"
+
+            class="hidden">
+
+        </div>
+
+        <button
+
+            id="nextBtn"
+
+            class="hidden">
+
+            SPIN AGAIN
+
+        </button>
+
     </div>
 
-    <button id="spinBtn">
+    <script src="cards.js"></script>
 
-        SPIN THE WHEEL
-
-    </button>
-
-    <h2 id="categoryTitle"></h2>
-
-    <button
-        id="drawBtn"
-        class="hidden">
-
-        DRAW CARD
-
-    </button>
-
-    <div
-        id="cardBox"
-        class="hidden">
-
-    </div>
-
-    <button
-        id="nextBtn"
-        class="hidden">
-
-        NEXT PLAYER
-
-    </button>
-
-</div>
-
-<script src="cards.js"></script>
-<script src="game.js"></script>
+    <script src="game.js"></script>
 
 </body>
+
 </html>
