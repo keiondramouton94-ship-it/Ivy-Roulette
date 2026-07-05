@@ -55,7 +55,8 @@ button:hover{
   style="
     width:500px;
     max-width:85%;
-    margin-bottom:10px;
+    margin-top:-180px;
+    margin-bottom:-110px;
     display:block;
     margin-left:auto;
     margin-right:auto;
