@@ -169,9 +169,17 @@ button:hover{
 
 #wheel{
 
-    font-size:120px;
+    width:420px;
+
+    max-width:90%;
 
     transition:transform 3s ease;
+
+    display:block;
+
+    margin:auto;
+
+}
 
 }
 
