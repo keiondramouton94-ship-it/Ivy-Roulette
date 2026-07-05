@@ -20,16 +20,12 @@ body{
   padding-top:20px;
 }
 
-h1{
-  color:#ff69b4;
-  font-size:60px;
-}
-
 h2{
   color:#8DB600;
   margin-top:5px;
   margin-bottom:25px;
 }
+
 button{
   background:#ff69b4;
   color:white;
@@ -43,6 +39,14 @@ button{
 
 button:hover{
   opacity:0.9;
+}
+
+input{
+  padding:15px;
+  width:500px;
+  border-radius:12px;
+  font-size:20px;
+  border:none;
 }
 </style>
 
@@ -70,47 +74,27 @@ button:hover{
 <input
   id="players"
   placeholder="Enter Your Name"
-  style="
-    padding:15px;
-    width:500px;
-    border-radius:12px;
-    font-size:20px;
-    border:none;
-  "
->
+/>
 
 <br><br>
 
-<button class="start-btn" onclick="startGame()">
+<button onclick="startGame()">
 START GAME
 </button>
 
 <div id="game"></div>
+
 <script>
 function startGame() {
 
   const name =
     document.getElementById("players").value;
 
-  document.getElementById("game").innerHTML = `
+  document.getElementById("game").innerHTML = \`
     <h1 style="color:hotpink;">
-      IT IS ${name.toUpperCase()}'S TURN!
+      IT IS \${name.toUpperCase()}'S TURN!
     </h1>
-  <button style="
-      background:hotpink;
-      color:white;
-      border:none;
-      padding:20px 40px;
-      border-radius:20px;
-      font-size:30px;
-      cursor:pointer;
-    ">
-      🎡 SPIN THE WHEEL
-    </button>
 
-  `;
-
-}
     <button style="
       background:hotpink;
       color:white;
@@ -122,27 +106,39 @@ function startGame() {
     ">
       🎡 SPIN THE WHEEL
     </button>
-  `;
+  \`;
 }
 </script>
 
 </body>
 </html>
+`;
 
 http.createServer((req,res)=>{
 
   if(req.url === "/ivy-logo.png"){
+
     fs.readFile("ivy-logo.png", (err, data) => {
-      res.writeHead(200, {"Content-Type":"image/png"});
+
+      res.writeHead(200,{
+        "Content-Type":"image/png"
+      });
+
       res.end(data);
+
     });
+
     return;
   }
 
-  res.writeHead(200,{"Content-Type":"text/html"});
+  res.writeHead(200,{
+    "Content-Type":"text/html"
+  });
+
   res.end(html);
 
 }).listen(PORT,()=>{
-  
+
   console.log("Ivy Roulette running on port " + PORT);
+
 });
