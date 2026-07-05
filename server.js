@@ -16,7 +16,8 @@ body{
   color:white;
   font-family:Arial,sans-serif;
   text-align:center;
-  margin-top:100px;
+  margin:0;
+  padding-top:20px;
 }
 
 h1{
@@ -26,8 +27,9 @@ h1{
 
 h2{
   color:#8DB600;
+  margin-top:5px;
+  margin-bottom:25px;
 }
-
 button{
   background:#ff69b4;
   color:white;
@@ -49,11 +51,14 @@ button:hover{
 <body>
 
 <img
-  src="ivy-logo.png"
+  src="/ivy-logo.png"
   style="
-    width:700px;
-    max-width:90%;
-    margin-bottom:30px;
+    width:500px;
+    max-width:85%;
+    margin-bottom:10px;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
   "
 >
 
