@@ -1,6 +1,6 @@
-/* =======================================
+/* ===================================
    IVY ROULETTE
-======================================= */
+=================================== */
 
 *{
     margin:0;
@@ -8,23 +8,55 @@
     box-sizing:border-box;
 }
 
+/* ===================================
+   BODY
+=================================== */
+
 body{
 
-    background:#000;
+    background-image:url("background.png");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+    background-attachment:fixed;
+
+    background-color:#000;
 
     color:white;
 
-    font-family:Arial,Helvetica,sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
 
     text-align:center;
+
+    min-height:100vh;
 
     overflow-x:hidden;
 
 }
 
-/* =======================================
+/* Dark overlay so text stays readable */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.45);
+
+    z-index:-1;
+
+}
+
+/* ===================================
    LOGO
-======================================= */
+=================================== */
 
 .logo-container{
 
@@ -32,21 +64,21 @@ body{
 
     justify-content:center;
 
-    margin-top:15px;
+    margin-top:20px;
 
 }
 
 .logo{
 
-    width:320px;
+    width:300px;
 
     max-width:90%;
 
 }
 
-/* =======================================
+/* ===================================
    SCREENS
-======================================= */
+=================================== */
 
 .home-screen,
 .game-screen{
@@ -59,7 +91,7 @@ body{
 
     justify-content:flex-start;
 
-    padding:25px;
+    padding:20px;
 
 }
 
@@ -69,21 +101,21 @@ body{
 
 }
 
-/* =======================================
+/* ===================================
    HEADINGS
-======================================= */
+=================================== */
 
 h1{
 
     color:#ff4fa3;
 
-    font-size:60px;
+    font-size:58px;
 
     text-shadow:
 
         0 0 10px hotpink,
 
-        0 0 30px hotpink;
+        0 0 25px hotpink;
 
     margin-bottom:20px;
 
@@ -97,15 +129,13 @@ h2{
 
         0 0 12px #8DB600;
 
-    margin-top:20px;
-
-    margin-bottom:20px;
+    margin-bottom:25px;
 
 }
 
-/* =======================================
-   INPUT
-======================================= */
+/* ===================================
+   PLAYER INPUT
+=================================== */
 
 input{
 
@@ -117,7 +147,7 @@ input{
 
     border:none;
 
-    border-radius:15px;
+    border-radius:18px;
 
     font-size:22px;
 
@@ -125,11 +155,13 @@ input{
 
     outline:none;
 
+    margin-top:20px;
+
 }
 
-/* =======================================
+/* ===================================
    BUTTONS
-======================================= */
+=================================== */
 
 button{
 
@@ -145,15 +177,15 @@ button{
 
     font-size:24px;
 
-    margin:20px;
-
     cursor:pointer;
+
+    margin:20px;
 
     transition:.25s;
 
     box-shadow:
 
-        0 0 15px hotpink;
+        0 0 18px hotpink;
 
 }
 
@@ -167,13 +199,13 @@ button:hover{
 
 }
 
-/* =======================================
+/* ===================================
    POINTER
-======================================= */
+=================================== */
 
 .pointer{
 
-    font-size:60px;
+    font-size:65px;
 
     color:#FFD700;
 
@@ -185,9 +217,9 @@ button:hover{
 
 }
 
-/* =======================================
+/* ===================================
    WHEEL
-======================================= */
+=================================== */
 
 .wheel-container{
 
@@ -199,7 +231,7 @@ button:hover{
 
     margin-top:10px;
 
-    margin-bottom:20px;
+    margin-bottom:15px;
 
 }
 
@@ -209,51 +241,55 @@ button:hover{
 
     max-width:95%;
 
+    display:block;
+
+    margin:auto;
+
     transition:
 
         transform 4s cubic-bezier(.17,.67,.24,1);
 
     transform-origin:center center;
 
-    display:block;
-
 }
 
-/* =======================================
+/* ===================================
    CATEGORY
-======================================= */
+=================================== */
 
 #categoryTitle{
 
-    font-size:50px;
+    font-size:48px;
 
     color:#8DB600;
 
     text-shadow:
 
-        0 0 20px #8DB600;
+        0 0 18px #8DB600;
 
-    margin-bottom:20px;
+    margin-top:10px;
+
+    margin-bottom:15px;
 
 }
 
-/* =======================================
-   CARD
-======================================= */
+/* ===================================
+   CARD AREA
+=================================== */
 
 #cardBox{
 
-    width:720px;
+    width:700px;
 
     max-width:92%;
 
-    min-height:320px;
+    min-height:350px;
 
-    background:#181818;
+    background:rgba(15,15,15,.92);
 
     border:4px solid hotpink;
 
-    border-radius:28px;
+    border-radius:25px;
 
     padding:35px;
 
@@ -267,21 +303,23 @@ button:hover{
 
     font-size:30px;
 
-    line-height:1.5;
+    line-height:1.6;
 
     box-shadow:
 
         0 0 30px hotpink,
 
-        0 0 10px #8DB600;
+        0 0 15px #8DB600;
 
-    margin-bottom:20px;
+    margin-top:20px;
+
+    margin-bottom:25px;
 
 }
 
-/* =======================================
+/* ===================================
    MOBILE
-======================================= */
+=================================== */
 
 @media(max-width:768px){
 
@@ -293,19 +331,19 @@ button:hover{
 
 h1{
 
-    font-size:38px;
+    font-size:36px;
 
 }
 
 #categoryTitle{
 
-    font-size:34px;
+    font-size:32px;
 
 }
 
 #wheel{
 
-    width:320px;
+    width:310px;
 
 }
 
@@ -317,11 +355,19 @@ button{
 
 }
 
+input{
+
+    width:90%;
+
+}
+
 #cardBox{
 
-    width:94%;
+    width:95%;
 
     font-size:22px;
+
+    min-height:260px;
 
     padding:25px;
 
