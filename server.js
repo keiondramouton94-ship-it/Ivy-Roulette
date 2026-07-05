@@ -48,7 +48,7 @@ button:hover{
 <body>
 
 <img
-  src="/ivy-logo.png"
+  src="ivy-logo.png"
   style="
     width:700px;
     max-width:90%;
