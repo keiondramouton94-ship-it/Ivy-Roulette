@@ -65,7 +65,10 @@ function spinWheel(){
     cardBox.classList.add("hidden");
     nextBtn.classList.add("hidden");
 
-    wheel.style.transform = "rotate(1440deg)";
+    const spins = 5;
+
+const degrees =
+    (Math.random() * 360) + (spins * 360);
 
     setTimeout(()=>{
 
