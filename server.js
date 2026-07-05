@@ -81,8 +81,8 @@ button:hover{
 
 <br><br>
 
-<button onclick="startGame()">
-  START GAME
+<button class="start-btn" onclick="startGame()">
+START GAME
 </button>
 
 <div id="game"></div>
