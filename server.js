@@ -47,7 +47,14 @@ button:hover{
 
 <body>
 
-<h1>IVY ROULETTE</h1>
+<img
+  src="/ivy-logo.png"
+  style="
+    width:700px;
+    max-width:90%;
+    margin-bottom:30px;
+  "
+>
 
 <h2>21+ • DRINK • DARE • GET WILD</h2>
 
