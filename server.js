@@ -83,7 +83,10 @@ function startGame() {
 
 }
 
-function showTurn() {
+`;
+}
+
+function spinWheel() {
 
     document.getElementById("game").innerHTML = `
         <h1 style="
